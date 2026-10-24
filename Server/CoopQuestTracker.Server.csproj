@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>CoopQuestTracker.Server</AssemblyName>
+    <Version>1.0.0</Version>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <!-- 4.1.6 isn't published on NuGet; 4.1.2 API is identical for what we use and the server's own DLLs are used at runtime -->
+  <ItemGroup>
+    <PackageReference Include="SPTarkov.Common" Version="4.1.2" ExcludeAssets="runtime" />
+    <PackageReference Include="SPTarkov.DI" Version="4.1.2" ExcludeAssets="runtime" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.1.2" ExcludeAssets="runtime" />
+    <Reference Include="$(SptPath)/SPT_Runtime/user/mods/fika-server/FikaServer.dll" Private="false" />
+  </ItemGroup>
+
+</Project>

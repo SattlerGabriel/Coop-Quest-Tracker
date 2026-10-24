@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Server/CoopQuestTracker.Server.csproj" />
+  <Project Path="Client/CoopQuestTracker.Client.csproj" />
+</Solution>
